@@ -77,10 +77,10 @@ document.querySelectorAll('.proj-card, .skill-card, .stat, .tag-item').forEach(e
 
 // --- TYPEWRITER for hero subtitle ---
 const subtitles = [
-  'Ingénieur IA & Data Science',
-  'Machine Learning Engineer',
-  'Data Analyst',
-  'Problem Solver'
+  'Étudiant ingénieur en IA et Data Science',
+  'Vision par ordinateur',
+  'Machine learning appliqué',
+  'Développement backend'
 ];
 const subEl = document.querySelector('.hero-sub');
 if (subEl) {
