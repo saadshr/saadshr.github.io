@@ -1,125 +1,73 @@
-// ============================================
-// SAAD SAHRAOUI — PORTFOLIO GODMODE JS
-// ============================================
+const controls = document.querySelector('.project-controls');
+const filters = [...controls.querySelectorAll('button[data-filter]')];
+const projectGrid = document.querySelector('#projects-grid');
+const projects = [...projectGrid.querySelectorAll('[data-category]')];
+const projectCount = controls.querySelector('.project-count');
 
-// --- CUSTOM CURSOR ---
-const cursor = document.getElementById('cursor');
-const cursorDot = document.getElementById('cursorDot');
-let mouseX = 0, mouseY = 0;
-let curX = 0, curY = 0;
-
-document.addEventListener('mousemove', e => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursorDot.style.left = mouseX + 'px';
-  cursorDot.style.top = mouseY + 'px';
-});
-
-function animateCursor() {
-  curX += (mouseX - curX) * 0.12;
-  curY += (mouseY - curY) * 0.12;
-  cursor.style.left = curX + 'px';
-  cursor.style.top = curY + 'px';
-  requestAnimationFrame(animateCursor);
-}
-animateCursor();
-
-// --- NAVBAR SCROLL ---
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 80) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
-});
-
-// --- SMOOTH ACTIVE LINKS ---
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 200) current = s.id;
-  });
-  navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
-  });
-});
-
-// --- INTERSECTION OBSERVER — skill bars + fade-in ---
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
-
-document.querySelectorAll('.skill-card').forEach(el => observer.observe(el));
-
-// Fade-in for project cards
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }, i * 100);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.proj-card, .skill-card, .stat, .tag-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  fadeObserver.observe(el);
-});
-
-// --- TYPEWRITER for hero subtitle ---
-const subtitles = [
-  'Étudiant ingénieur en IA et Data Science',
-  'Vision par ordinateur',
-  'Machine learning appliqué',
-  'Développement backend'
-];
-const subEl = document.querySelector('.hero-sub');
-if (subEl) {
-  let si = 0, ci = 0, deleting = false;
-  function typeWriter() {
-    const current = subtitles[si];
-    if (!deleting) {
-      subEl.textContent = current.slice(0, ci++);
-      if (ci > current.length) { deleting = true; setTimeout(typeWriter, 1800); return; }
-    } else {
-      subEl.textContent = current.slice(0, ci--);
-      if (ci < 0) { deleting = false; si = (si + 1) % subtitles.length; ci = 0; }
-    }
-    setTimeout(typeWriter, deleting ? 50 : 80);
+function showProjects(category) {
+  let count = 0;
+  for (const project of projects) {
+    project.hidden = category !== 'all' && project.dataset.category !== category;
+    if (!project.hidden) count += 1;
   }
-  setTimeout(typeWriter, 1500);
+  for (const button of filters) {
+    button.setAttribute('aria-pressed', String(button.dataset.filter === category));
+  }
+  projectCount.textContent = `${count} projet${count === 1 ? '' : 's'}`;
 }
 
-// --- TILT effect on project cards ---
-document.querySelectorAll('.proj-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    card.style.transform = `translateY(-5px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
-    card.style.perspective = '800px';
+for (const button of filters) {
+  button.addEventListener('click', () => {
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    showProjects(button.dataset.filter);
+    projectGrid.classList.remove('is-filtered');
+    requestAnimationFrame(() => projectGrid.classList.add('is-filtered'));
+    scheduleReadingUpdate();
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
-  });
-});
+}
+showProjects('all');
+controls.hidden = false;
 
-// --- GLITCH effect on logo click ---
-document.querySelector('.nav-logo').addEventListener('click', () => {
-  const logo = document.querySelector('.nav-logo');
-  logo.style.animation = 'none';
-  logo.style.color = 'var(--accent)';
-  setTimeout(() => logo.style.color = '', 400);
-});
+const navigation = document.querySelector('#nav');
+const progress = navigation.querySelector('.reading-progress');
+const destinations = [...navigation.querySelectorAll('.nav-links a')].map(link => ({
+  link,
+  section: document.querySelector(link.hash)
+}));
 
-console.log('%c👋 Salut recruteur ! Code source sur github.com/saadshr', 
-  'background:#4FFFB0; color:#000; padding:8px 16px; font-family:monospace; border-radius:4px;');
+let scheduled = false;
+let activeLink;
+
+function updateReadingPosition() {
+  scheduled = false;
+  const { scrollHeight, clientHeight } = document.documentElement;
+  const scrollableHeight = scrollHeight - clientHeight;
+  const position = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+  progress.style.transform = `scaleX(${Math.max(0, Math.min(position, 1))})`;
+
+  const line = Math.max(0, navigation.getBoundingClientRect().bottom) + 56;
+  let current = destinations[0];
+  for (const destination of destinations) {
+    if (destination.section.getBoundingClientRect().top <= line) current = destination;
+  }
+  if (scrollableHeight > 0 && window.scrollY >= scrollableHeight - 2) {
+    current = destinations.at(-1);
+  }
+  if (activeLink !== current.link) {
+    activeLink?.removeAttribute('aria-current');
+    current.link.setAttribute('aria-current', 'location');
+    activeLink = current.link;
+  }
+}
+
+function scheduleReadingUpdate() {
+  if (scheduled) return;
+  scheduled = true;
+  requestAnimationFrame(updateReadingPosition);
+}
+
+window.addEventListener('scroll', scheduleReadingUpdate, { passive: true });
+window.addEventListener('resize', scheduleReadingUpdate);
+window.addEventListener('pageshow', scheduleReadingUpdate);
+window.addEventListener('load', scheduleReadingUpdate);
+updateReadingPosition();
