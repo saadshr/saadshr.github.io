@@ -55,14 +55,9 @@ svg { flex: none; vertical-align: middle; }
 .nav-inner { display: flex; min-height: 4.5rem; align-items: center; justify-content: space-between; gap: 1rem; }
 .nav-logo { display: inline-flex; align-items: center; gap: .65rem; font-size: .95rem; font-weight: 750; text-decoration: none; }
 .monogram {
-  display: grid;
-  place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: .5rem;
-  background: var(--ink);
-  color: var(--white);
-  font: 600 .83rem var(--mono);
+  flex: none;
+  border-radius: .55rem;
+  box-shadow: 0 2px 6px #14253c26;
 }
 .nav-links { display: flex; flex-wrap: wrap; gap: .35rem clamp(.75rem, 2vw, 1.7rem); padding: 0; list-style: none; }
 .nav-links a, .nav-cta { font-size: .875rem; font-weight: 650; text-decoration: none; }
