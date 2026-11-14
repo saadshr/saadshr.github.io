@@ -223,6 +223,25 @@ main section:not(#hero) { padding-block: clamp(3rem, 7.5vw, 6rem); }
 #contact { background: var(--ice); }
 .contact-inner { text-align: center; }
 .contact-sub { margin: 1rem auto 1.4rem; color: var(--muted); max-width: 54ch; }
+.contact-phone {
+  display: grid;
+  gap: .75rem;
+  width: min(100%, 24rem);
+  margin: 1rem auto 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: .9rem;
+  background: var(--white);
+  box-shadow: 0 8px 24px #14253c0c;
+}
+.contact-phone-number {
+  font-size: clamp(1.15rem, 4vw, 1.45rem);
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+.contact-phone-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; }
+.contact-whatsapp { background: #e9f7ef; border-color: #b9dfc9; color: var(--green); }
+.contact-whatsapp:hover { background: #d7efdf; }
 .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: .45rem 1.5rem; margin-top: 1rem; }
 .contact-links a { display: inline-flex; align-items: center; gap: .5rem; padding-block: .35rem; color: var(--blue-dark); font-size: .875rem; font-weight: 650; text-underline-offset: .25em; overflow-wrap: anywhere; }
 .contact-links svg { width: 1rem; height: 1rem; }
