@@ -2,7 +2,7 @@
   <img src="profile.png" alt="Portrait de Saad Sahraoui" width="96">
   <h1>Saad Sahraoui · Portfolio</h1>
   <p><strong>Étudiant ingénieur en IA et data science · ENSAM Rabat</strong></p>
-  <p>Vision par ordinateur, machine learning et développement web.</p>
+  <p>Business intelligence, vision par ordinateur, machine learning et développement web.</p>
   <p>
     <a href="https://saadshr.github.io/"><strong>Voir le portfolio</strong></a> ·
     <a href="saad_sahraoui_cv.pdf">Consulter le CV (PDF)</a> ·
@@ -14,9 +14,17 @@
 
 Je me spécialise en data science, intelligence artificielle et santé digitale à l’ENSAM Rabat, dans la filière INDIA. Ce portfolio rassemble mon parcours, mes compétences et les projets que j’ai réalisés en formation ou en entreprise.
 
-Le site présente **six projets** que l’on peut filtrer par domaine : IA et machine learning, données ou web. La navigation indique la section en cours de lecture et la mise en page s’adapte aux écrans mobiles.
+Le site présente **sept projets** que l’on peut filtrer par domaine : IA et machine learning, données ou web. La navigation indique la section en cours de lecture et la mise en page s’adapte aux écrans mobiles.
 
 ## Projets à la une
+
+### Smart Industrial Maintenance BI
+
+**Business intelligence et IoT industriel · ENSAM Rabat · 2026**
+
+Réalisé avec Hassan El Hajjam et Yassine Saddane, le projet analyse les signaux d’un compresseur ferroviaire à partir de MetroPT-3. Le pipeline Python et Power Query (M) alimente un modèle dimensionnel, exploité avec DAX dans trois pages Power BI. Le jeu de données compte **1 516 948 observations**, dont **29 954 (1,97 %)** dans les quatre périodes d’incident documentées. Le rapport académique est rédigé en LaTeX.
+
+[Voir le projet sur GitHub](https://github.com/saadshr/smart-industrial-maintenance-bi) · [Lire le rapport (PDF)](https://github.com/saadshr/smart-industrial-maintenance-bi/blob/main/BI_MetroPT_Report/output/BI_MetroPT_Report.pdf)
 
 ### Gripper Vision AI
 
@@ -49,6 +57,7 @@ Réalisé avec Hassan El Hajjam dans le cadre du module Machine Learning 2. Le p
 </p>
 
 - **Projets de données et d’IA :** Python, OpenCV, scikit-learn, pandas et Streamlit.
+- **Business intelligence :** Power BI, Power Query (M), DAX et LaTeX.
 - **Portfolio :** HTML, CSS et JavaScript natifs, avec Git pour le suivi des versions.
 
 ## Lancer le portfolio en local

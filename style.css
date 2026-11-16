@@ -208,6 +208,7 @@ main section:not(#hero) { padding-block: clamp(3rem, 7.5vw, 6rem); }
 .proj-year { color: var(--muted); font: .78rem var(--mono); }
 .proj-card h3, .skill-card h3 { font-size: 1.13rem; line-height: 1.3; letter-spacing: -.02em; }
 .proj-card.featured h3 { font-size: clamp(1.25rem, 2.5vw, 1.65rem); }
+.project-preview { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: .5rem; }
 .proj-card p, .skill-card ul { color: var(--muted); font-size: .93rem; }
 .proj-card p { flex: 1; }
 .proj-actions { display: flex; flex-wrap: wrap; gap: .55rem 1.1rem; }
