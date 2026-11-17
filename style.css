@@ -131,7 +131,7 @@ svg { flex: none; vertical-align: middle; }
 .photo-caption strong, .photo-caption div span { display: block; }
 .photo-caption strong { font-size: .88rem; }
 .photo-caption div span { font-size: .79rem; color: var(--muted); }
-.photo-index, .skill-index {
+.photo-index {
   display: grid;
   place-items: center;
   flex: none;
@@ -215,10 +215,53 @@ main section:not(#hero) { padding-block: clamp(3rem, 7.5vw, 6rem); }
 .proj-btn:hover { text-decoration-thickness: 2px; }
 
 .skills-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.skill-card { background: var(--paper); }
-.skill-card h3 { margin-block: .9rem .65rem; }
+.skill-card {
+  min-width: 0;
+  border-color: var(--skill-line);
+  border-top: 3px solid var(--skill-accent);
+  background: linear-gradient(155deg, var(--skill-tint), var(--white) 80%);
+}
+.skill-card--ai {
+  --skill-accent: #6941b2;
+  --skill-line: #ddd1f1;
+  --skill-tint: #f4eeff;
+}
+.skill-card--analytics {
+  --skill-accent: #1b619d;
+  --skill-line: #cbdff1;
+  --skill-tint: #eaf5ff;
+}
+.skill-card--engineering {
+  --skill-accent: #147665;
+  --skill-line: #c3e1d7;
+  --skill-tint: #e9f8f3;
+}
+.skill-card--development {
+  --skill-accent: #a34d19;
+  --skill-line: #ecd6c4;
+  --skill-tint: #fff3e8;
+}
+.skill-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+.skill-logos img {
+  display: block;
+  box-sizing: content-box;
+  flex: none;
+  padding: .45rem;
+  object-fit: contain;
+  border: 1px solid var(--skill-line);
+  border-radius: .55rem;
+  background: var(--white);
+}
+.skill-card h3 {
+  margin-block: .85rem .6rem;
+  color: var(--skill-accent);
+}
 .skill-card ul { display: grid; gap: .36rem; padding-left: 1rem; }
-.skill-card li::marker { color: var(--blue); }
+.skill-card li::marker { color: var(--skill-accent); }
 
 #contact { background: var(--ice); }
 .contact-inner { text-align: center; }
@@ -387,7 +430,7 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
     transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease;
   }
   .proj-card:focus-within, .proj-card:hover, .skill-card:hover {
-    border-color: #91add1;
+    border-color: var(--skill-accent, #91add1);
     box-shadow: 0 10px 24px #25446d12;
     transform: translateY(-3px);
   }
