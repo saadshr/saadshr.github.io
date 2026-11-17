@@ -208,7 +208,6 @@ main section:not(#hero) { padding-block: clamp(3rem, 7.5vw, 6rem); }
 .proj-year { color: var(--muted); font: .78rem var(--mono); }
 .proj-card h3, .skill-card h3 { font-size: 1.13rem; line-height: 1.3; letter-spacing: -.02em; }
 .proj-card.featured h3 { font-size: clamp(1.25rem, 2.5vw, 1.65rem); }
-.project-preview { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: .5rem; }
 .proj-card p, .skill-card ul { color: var(--muted); font-size: .93rem; }
 .proj-card p { flex: 1; }
 .proj-actions { display: flex; flex-wrap: wrap; gap: .55rem 1.1rem; }
@@ -347,7 +346,7 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
 
 .project-visual {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   align-items: center;
   gap: .25rem;
   width: 100%;
@@ -363,14 +362,20 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
   font: 650 clamp(.64rem, 1.4vw, .75rem)/1.4 var(--mono);
   overflow-wrap: anywhere;
 }
-.project-visual svg { width: 100%; height: 5.75rem; }
+.project-visual svg { display: block; width: 100%; height: 5.75rem; }
 .visual-guide { fill: none; stroke: #bfd0e5; stroke-dasharray: 3 3; }
 .visual-shape { fill: #c8dbf4; stroke: #2054a0; stroke-width: 2; }
+.visual-surface { fill: #f7fbff; stroke: #3477c8; stroke-width: 1.5; }
+.visual-line { fill: none; stroke: #2054a0; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.visual-highlight { fill: #228168; fill-opacity: .17; }
 .visual-corners, .vision-scan { fill: none; stroke: #3477c8; stroke-width: 1.5; }
 .vision-scan { stroke: #228168; }
 .cluster-a { color: #3164a9; }
 .cluster-b { color: #2a806d; }
-.project-visual circle { fill: currentColor; }
+.project-visual .cluster-a circle, .project-visual .cluster-b circle { fill: currentColor; }
+.visual-dot { fill: #3164a9; }
+.visual-dot.visual-accent { fill: #228168; }
+.visual-line.visual-accent { stroke: #228168; }
 .project-visual ellipse { fill: currentColor; fill-opacity: .13; stroke: currentColor; stroke-dasharray: 4 3; }
 
 @media (max-width: 48rem) {

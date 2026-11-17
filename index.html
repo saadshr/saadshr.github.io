@@ -136,7 +136,16 @@
           <span class="proj-tag">Business Intelligence · IoT industriel</span>
           <time class="proj-year" datetime="2026">2026</time>
         </div>
-        <img class="project-preview" src="assets/metropt-overview.webp" width="891" height="496" alt="Aperçu de la page Vue générale du tableau de bord MetroPT-3" loading="lazy" decoding="async">
+        <div class="project-visual" aria-hidden="true">
+          <span>Capteurs &amp; incidents</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <rect class="visual-surface" x="36" y="15" width="148" height="74" rx="7"/>
+            <path class="visual-guide" d="M49 35h122M49 52h122M49 69h122M75 25v53M110 25v53M145 25v53"/>
+            <rect class="visual-highlight" x="117" y="25" width="24" height="53" rx="3"/>
+            <path class="visual-line" d="M49 59h15l7-15 8 18 10-25 9 22h11l9-8 10 19 11-33 8 22h24"/>
+            <circle class="visual-dot" cx="128" cy="70" r="3.5"/>
+          </svg>
+        </div>
         <h3>Smart Industrial Maintenance BI</h3>
         <p>Projet d’équipe à l’ENSAM Rabat sur le compresseur d’un métro. Trois pages Power BI couvrent la vue générale, le suivi des capteurs et l’analyse OLAP des incidents. Sur 1 516 948 observations issues de MetroPT-3, 29 954 (1,97 %) se situent dans les quatre périodes d’incident documentées.</p>
         <div class="proj-tech">
@@ -205,10 +214,52 @@
         </div>
       </article>
 
+      <article class="proj-card featured" data-category="ai">
+        <div class="proj-meta">
+          <span class="proj-tag">Machine Learning · Transactions</span>
+          <time class="proj-year" datetime="2026">2026</time>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <span>Transactions &amp; alertes</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M35 18h150v68H35z M48 30v44M81 30v44M114 30v44M147 30v44"/>
+            <path class="visual-line" d="M48 52h63"/>
+            <circle class="visual-dot" cx="52" cy="52" r="4"/>
+            <circle class="visual-dot" cx="70" cy="52" r="4"/>
+            <circle class="visual-dot" cx="88" cy="52" r="4"/>
+            <path class="visual-shape" d="M123 36l16 16-16 16-16-16z"/>
+            <path class="visual-line" d="M139 52h9l13 17h11"/>
+            <path class="visual-line visual-accent" d="M139 52h9l13-17h11"/>
+            <circle class="visual-dot" cx="173" cy="69" r="4"/>
+            <circle class="visual-dot visual-accent" cx="173" cy="35" r="6"/>
+          </svg>
+        </div>
+        <h3>Smart Fraud Detection</h3>
+        <p>Comparaison de la régression logistique, de Random Forest et de XGBoost sur des transactions très déséquilibrées. Une API FastAPI expose la prédiction et un tableau de bord Streamlit permet d’explorer les résultats.</p>
+        <div class="proj-tech">
+          <span><img src="assets/tech/python-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">Python</span><span><img src="assets/tech/scikitlearn-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">scikit-learn</span><span>XGBoost</span><span>FastAPI</span><span><img src="assets/tech/streamlit-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">Streamlit</span>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/saadshr/fraud_detection" target="_blank" rel="noopener" class="proj-btn">Fraud Detection sur GitHub</a>
+        </div>
+      </article>
+
       <article class="proj-card" data-category="ai">
         <div class="proj-meta">
           <span class="proj-tag">Machine Learning</span>
           <span class="proj-year">2024</span>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <span>Arbre de décision</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M38 25h144M38 52h144M38 79h144"/>
+            <path class="visual-line" d="M110 26v13H71v13m39-13h39v13M71 55v13H50v12m21-12h21v12m57-25v13h-21v12m21-12h21v12"/>
+            <rect class="visual-shape" x="98" y="17" width="24" height="15" rx="4"/>
+            <rect class="visual-surface" x="61" y="46" width="20" height="13" rx="3"/>
+            <rect class="visual-surface" x="139" y="46" width="20" height="13" rx="3"/>
+            <circle class="visual-dot" cx="50" cy="81" r="4"/><circle class="visual-dot visual-accent" cx="92" cy="81" r="4"/>
+            <circle class="visual-dot" cx="128" cy="81" r="4"/><circle class="visual-dot visual-accent" cx="170" cy="81" r="4"/>
+          </svg>
         </div>
         <h3>Classification ML — Arbre de décision</h3>
         <p>Modèle de classification comparant Random Forest et Decision Tree avec optimisation GridSearchCV. Accuracy de 94% sur dataset UCI.</p>
@@ -222,6 +273,15 @@
           <span class="proj-tag">Data Analysis</span>
           <span class="proj-year">2024</span>
         </div>
+        <div class="project-visual" aria-hidden="true">
+          <span>Distribution des données</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M45 22h130M45 40h130M45 59h130"/>
+            <path class="visual-line" d="M45 18v62h132"/>
+            <path class="visual-shape" d="M56 80V69h14v11z M74 80V55h14v25z M92 80V39h14v41z M110 80V33h14v47z M128 80V49h14v31z M146 80V65h14v15z"/>
+            <path class="visual-line visual-accent" d="M52 72c17-1 22-19 38-32 10-9 21-14 33-9 17 7 18 28 44 40"/>
+          </svg>
+        </div>
         <h3>Analyse exploratoire — EDA</h3>
         <p>Pipeline d'analyse de données avec Pandas : nettoyage, visualisation avec Seaborn/Matplotlib, insights statistiques.</p>
         <div class="proj-tech">
@@ -234,6 +294,18 @@
           <span class="proj-tag">Data Engineering</span>
           <span class="proj-year">2024</span>
         </div>
+        <div class="project-visual" aria-hidden="true">
+          <span>Flux, cache &amp; stockage</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M35 19h150v66H35z"/>
+            <path class="visual-line" d="M63 52h38m-7-5 7 5-7 5m25-5h38m-7-5 7 5-7 5"/>
+            <circle class="visual-surface" cx="53" cy="52" r="10"/>
+            <circle class="visual-dot" cx="53" cy="52" r="3"/>
+            <path class="visual-shape" d="M101 52l9-12h12l-9 12 9 12h-12z"/>
+            <path class="visual-surface" d="M157 42c0-9 24-9 24 0v20c0 9-24 9-24 0z"/>
+            <path class="visual-line visual-accent" d="M157 43c0 8 24 8 24 0m-24 10c0 8 24 8 24 0"/>
+          </svg>
+        </div>
         <h3>Système IoT — Redis &amp; Cassandra</h3>
         <p>Architecture de traitement de journaux IoT en temps réel avec stockage distribué Redis (cache) + Cassandra (persistance).</p>
         <div class="proj-tech">
@@ -243,8 +315,50 @@
 
       <article class="proj-card" data-category="web">
         <div class="proj-meta">
+          <span class="proj-tag">Backend · API REST</span>
+          <time class="proj-year" datetime="2026">2026</time>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <span>Client, API &amp; base</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M31 22h158v60H31z"/>
+            <path class="visual-line" d="M75 52h21m28 0h24m-57-4 5 4-5 4m52-8 5 4-5 4"/>
+            <rect class="visual-surface" x="38" y="38" width="37" height="28" rx="4"/>
+            <path class="visual-line" d="M38 46h37M46 54h11m-11 5h19"/>
+            <rect class="visual-shape" x="96" y="38" width="28" height="28" rx="5"/>
+            <path class="visual-line" d="M106 47l-5 5 5 5m8-10 5 5-5 5"/>
+            <path class="visual-surface" d="M148 42c0-9 34-9 34 0v20c0 9-34 9-34 0z"/>
+            <path class="visual-line visual-accent" d="M148 43c0 8 34 8 34 0m-34 10c0 8 34 8 34 0"/>
+          </svg>
+        </div>
+        <h3>SaadRent — API backend</h3>
+        <p>API REST Laravel pour le catalogue de véhicules et les réservations. L’authentification JWT protège les opérations utilisateur et les routes d’administration de la flotte.</p>
+        <div class="proj-tech">
+          <span>Laravel</span><span>PHP</span><span>MySQL</span><span>JWT</span>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/saadshr/carrental-backend" target="_blank" rel="noopener" class="proj-btn">Backend sur GitHub</a>
+          <a href="https://github.com/saadshr/carrental-frontend" target="_blank" rel="noopener" class="proj-btn">Frontend React</a>
+        </div>
+      </article>
+
+      <article class="proj-card" data-category="web">
+        <div class="proj-meta">
           <span class="proj-tag">Web Dev</span>
           <span class="proj-year">2025</span>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <span>Interface responsive</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M34 18h152v68H34z"/>
+            <rect class="visual-surface" x="47" y="26" width="105" height="52" rx="5"/>
+            <path class="visual-line" d="M47 37h105m-94 9h30m-30 7h19"/>
+            <rect class="visual-highlight" x="97" y="45" width="42" height="22" rx="3"/>
+            <rect class="visual-highlight" x="58" y="61" width="25" height="6" rx="2"/>
+            <rect class="visual-surface" x="143" y="44" width="27" height="43" rx="5"/>
+            <path class="visual-line" d="M150 54h13m-13 7h10m-7 18h7"/>
+            <rect class="visual-highlight" x="150" y="65" width="13" height="8" rx="2"/>
+          </svg>
         </div>
         <h3>Portfolio interactif</h3>
         <p>Site personnel réalisé en HTML, CSS et JavaScript, avec une mise en page responsive, des animations et un CV téléchargeable.</p>

@@ -14,7 +14,7 @@
 
 Je me spécialise en data science, intelligence artificielle et santé digitale à l’ENSAM Rabat, dans la filière INDIA. Ce portfolio rassemble mon parcours, mes compétences et les projets que j’ai réalisés en formation ou en entreprise.
 
-Le site présente **sept projets** que l’on peut filtrer par domaine : IA et machine learning, données ou web. La navigation indique la section en cours de lecture et la mise en page s’adapte aux écrans mobiles.
+Le site présente **neuf projets** que l’on peut filtrer par domaine : IA et machine learning, données ou web. Chaque carte contient une illustration schématique. La navigation indique la section en cours de lecture et la mise en page s’adapte aux écrans mobiles.
 
 ## Projets à la une
 
@@ -41,6 +41,12 @@ Réalisé avec Hassan El Hajjam et Yassine Saddane, le projet analyse les signau
 Réalisé avec Hassan El Hajjam dans le cadre du module Machine Learning 2. Le projet compare K-Means, la classification hiérarchique de Ward et DBSCAN sur les dépenses de **440 clients** du jeu de données UCI Wholesale Customers. La configuration retenue, K-Means à deux groupes, obtient un **score de silhouette de 0,2903** sur l’ensemble des clients.
 
 [Consulter les notebooks et le rapport](https://github.com/saadshr/ml2-customer-segmentation)
+
+### Smart Fraud Detection
+
+Le projet compare trois modèles sur des transactions déséquilibrées et propose une API FastAPI et une interface Streamlit.
+
+[Voir le projet sur GitHub](https://github.com/saadshr/fraud_detection)
 
 ## Technologies
 
