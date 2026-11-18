@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saad Sahraoui | Étudiant ingénieur en IA et Data Science</title>
   <meta name="description" content="Portfolio de Saad Sahraoui, étudiant ingénieur à l’ENSAM Rabat. Projets en business intelligence, vision par ordinateur, machine learning et développement web.">
-  <meta name="theme-color" content="#f7f9fc">
+  <meta name="theme-color" content="#0a1016">
   <link rel="icon" href="assets/saad-monogram.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -39,6 +39,7 @@
 <main>
 <!-- HERO -->
 <section id="hero" tabindex="-1">
+  <canvas class="hero-network" aria-hidden="true"></canvas>
   <div class="section-inner hero-inner">
     <div class="hero-content">
       <p class="eyebrow">Portfolio <span></span> ENSAM Rabat</p>
@@ -62,10 +63,15 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
           Email
         </a>
+        <a href="https://wa.me/212635678771" class="hero-link hero-whatsapp" aria-label="WhatsApp +212 635 678 771">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.3 7.9L3 21l1.6-4.7A9 9 0 1 1 21 11.5Z"/><path d="M9 8c-1 1 0 3 1.5 4.5S14 15 15 14"/></svg>
+          +212 635 678 771
+        </a>
       </div>
     </div>
     <figure class="hero-photo-wrap">
-      <img src="profile.png" width="832" height="1248" alt="Portrait de Saad Sahraoui" class="hero-photo" fetchpriority="high">
+      <span class="hero-geometry" aria-hidden="true"></span>
+      <img src="profile.png" srcset="assets/profile.webp" width="832" height="1248" alt="Portrait de Saad Sahraoui" class="hero-photo" fetchpriority="high">
       <figcaption class="photo-caption">
         <span class="photo-index" aria-hidden="true">02</span>
         <div><strong>Cycle ingénieur · 2e année</strong><span>ENSAM Rabat, Maroc</span></div>
@@ -74,7 +80,12 @@
   </div>
   <div class="section-inner hero-footer">
     <span class="availability"><span aria-hidden="true"></span> Disponible pour un stage en IA ou data science</span>
-    <a href="#about">À propos de mon parcours <span aria-hidden="true">↓</span></a>
+    <div class="hero-footer-actions">
+      <a href="#about">À propos de mon parcours <span aria-hidden="true">↓</span></a>
+      <button class="motion-toggle" type="button" aria-label="Animation de l’arrière-plan" aria-pressed="true" hidden>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -136,17 +147,41 @@
           <span class="proj-tag">Business Intelligence · IoT industriel</span>
           <time class="proj-year" datetime="2026">2026</time>
         </div>
-        <div class="project-visual" aria-hidden="true">
-          <span>Capteurs &amp; incidents</span>
-          <svg viewBox="0 0 220 104" focusable="false">
-            <rect class="visual-surface" x="36" y="15" width="148" height="74" rx="7"/>
-            <path class="visual-guide" d="M49 35h122M49 52h122M49 69h122M75 25v53M110 25v53M145 25v53"/>
-            <rect class="visual-highlight" x="117" y="25" width="24" height="53" rx="3"/>
-            <path class="visual-line" d="M49 59h15l7-15 8 18 10-25 9 22h11l9-8 10 19 11-33 8 22h24"/>
-            <circle class="visual-dot" cx="128" cy="70" r="3.5"/>
-          </svg>
-        </div>
         <h3>Smart Industrial Maintenance BI</h3>
+        <figure class="metro-dashboard" aria-labelledby="metro-dashboard-title">
+          <figcaption class="metro-header">
+            <strong id="metro-dashboard-title">Capteurs &amp; incidents</strong>
+            <span>MetroPT-3</span>
+          </figcaption>
+          <dl class="metro-kpis">
+            <div><dt>Observations IoT</dt><dd>1&#8239;516&#8239;948</dd></div>
+            <div><dt>Périodes documentées</dt><dd>4</dd></div>
+            <div><dt>Observations dans les périodes</dt><dd>29&#8239;954</dd></div>
+            <div><dt>Part du total</dt><dd>1,97&#8239;%</dd></div>
+          </dl>
+          <div class="metro-chart">
+            <p>Observations par rapport d’incident</p>
+            <dl class="metro-bars">
+              <div>
+                <dt>Rapport 1</dt>
+                <dd><span class="metro-track" style="--share:43.285%" aria-hidden="true"></span><span>8&#8239;657</span></dd>
+              </div>
+              <div>
+                <dt>Rapport 2</dt>
+                <dd><span class="metro-track" style="--share:11.8%" aria-hidden="true"></span><span>2&#8239;360</span></dd>
+              </div>
+              <div class="metro-peak">
+                <dt>Rapport 3</dt>
+                <dd><span class="metro-track" style="--share:86.575%" aria-hidden="true"></span><span>17&#8239;315</span></dd>
+              </div>
+              <div>
+                <dt>Rapport 4</dt>
+                <dd><span class="metro-track" style="--share:8.11%" aria-hidden="true"></span><span>1&#8239;622</span></dd>
+              </div>
+            </dl>
+            <div class="metro-axis" aria-hidden="true"><span>0</span><span>10 k</span><span>20 k</span></div>
+          </div>
+        </figure>
         <p>Projet d’équipe à l’ENSAM Rabat sur le compresseur d’un métro. Trois pages Power BI couvrent la vue générale, le suivi des capteurs et l’analyse OLAP des incidents. Sur 1 516 948 observations issues de MetroPT-3, 29 954 (1,97 %) se situent dans les quatre périodes d’incident documentées.</p>
         <div class="proj-tech">
           <span><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" width="15" height="15" alt="" loading="lazy" decoding="async">Power BI</span>
