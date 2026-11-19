@@ -431,6 +431,20 @@ main section + section { border-top: 1px solid var(--line); }
 }
 .proj-card { display: flex; flex-direction: column; align-items: start; gap: .75rem; }
 .proj-card.featured { background: linear-gradient(165deg, #162832, var(--surface) 78%); }
+.socket-preview {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+  background: #071b2b;
+}
+.socket-preview img { width: 100%; height: auto; aspect-ratio: 1672 / 941; object-fit: cover; }
+.socket-preview figcaption {
+  padding: .65rem .85rem;
+  border-top: 1px solid var(--line);
+  color: var(--accent);
+  font: .8rem/1.5 var(--mono);
+}
 .proj-card:is(:hover, :focus-within) { border-color: var(--signal); }
 .proj-meta { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: .65rem; }
 .proj-tag { color: var(--accent); font-size: .76rem; font-weight: 730; }

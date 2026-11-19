@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saad Sahraoui | Étudiant ingénieur en IA et Data Science</title>
-  <meta name="description" content="Portfolio de Saad Sahraoui, étudiant ingénieur à l’ENSAM Rabat. Projets en business intelligence, vision par ordinateur, machine learning et développement web.">
+  <meta name="description" content="Portfolio de Saad Sahraoui, étudiant ingénieur à l’ENSAM Rabat. Projets en business intelligence, vision par ordinateur, machine learning, développement web et programmation réseau en C.">
   <meta name="theme-color" content="#0a1016">
   <link rel="icon" href="assets/saad-monogram.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -130,13 +130,14 @@
   <div class="section-inner">
     <div class="section-label">02 / Projets</div>
     <h2 class="section-title">Projets techniques</h2>
-    <p class="section-intro">Du prototypage en milieu industriel à l’analyse de données.</p>
+    <p class="section-intro">Du prototypage en milieu industriel à l’analyse de données, aux applications web et à la programmation réseau.</p>
     <div class="project-controls" hidden>
       <div class="project-filters" role="group" aria-label="Filtrer les projets">
         <button type="button" data-filter="all" aria-pressed="true" aria-controls="projects-grid">Tous</button>
         <button type="button" data-filter="ai" aria-pressed="false" aria-controls="projects-grid">IA &amp; ML</button>
         <button type="button" data-filter="data" aria-pressed="false" aria-controls="projects-grid">Données</button>
         <button type="button" data-filter="web" aria-pressed="false" aria-controls="projects-grid">Web</button>
+        <button type="button" data-filter="network" aria-pressed="false" aria-controls="projects-grid">Réseaux &amp; C</button>
       </div>
       <p class="project-count" role="status"></p>
     </div>
@@ -193,6 +194,27 @@
         <div class="proj-actions">
           <a href="https://github.com/saadshr/smart-industrial-maintenance-bi" target="_blank" rel="noopener" class="proj-btn">Projet BI sur GitHub</a>
           <a href="https://github.com/saadshr/smart-industrial-maintenance-bi/blob/main/BI_MetroPT_Report/output/BI_MetroPT_Report.pdf" target="_blank" rel="noopener" class="proj-btn">Rapport (PDF)</a>
+        </div>
+      </article>
+
+      <article class="proj-card featured" data-category="network" id="project-sockethub">
+        <div class="proj-meta">
+          <span class="proj-tag">Programmation réseau · C natif</span>
+          <time class="proj-year" datetime="2026">2026</time>
+        </div>
+        <figure class="socket-preview">
+          <img src="assets/sockethub-network.png" width="1672" height="941" alt="Illustration de SocketHub-C : un client C échange des données avec un serveur" loading="lazy" decoding="async">
+          <figcaption>Chat TCP · FTP passif · WinSock2</figcaption>
+        </figure>
+        <h3>SocketHub-C — Chat TCP &amp; FTP</h3>
+        <p>Quatre programmes C11 sous Windows : clients et serveurs pour une messagerie TCP et un service FTP passif. Le projet gère le cadrage des messages, les envois partiels, l’authentification FTP et les transferts dans un dossier dédié, sans écrasement de fichiers existants. Des scripts PowerShell valident les échanges, les transferts et leur intégrité avec SHA-256. Démonstration locale sur 127.0.0.1, sans chiffrement.</p>
+        <div class="proj-tech">
+          <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/c/c-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">C11</span>
+          <span>WinSock2</span><span>GCC</span><span>PowerShell</span><span>TCP / FTP</span>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/saadshr/socket-network-programming" target="_blank" rel="noopener" class="proj-btn">SocketHub-C sur GitHub</a>
+          <a href="https://github.com/saadshr/socket-network-programming/blob/main/presentation/output/SocketHub-C_Presentation.pdf" target="_blank" rel="noopener" class="proj-btn">Présentation (PDF)</a>
         </div>
       </article>
 
@@ -472,10 +494,10 @@
         </div>
         <h3>Développement &amp; DevOps</h3>
         <ul>
-          <li>Python, JavaScript, HTML/CSS</li>
+          <li>Python, C11, JavaScript, HTML/CSS</li>
           <li>Git / GitHub — versioning</li>
           <li>Linux — shell scripting</li>
-          <li>REST APIs</li>
+          <li>API REST, sockets TCP et FTP avec WinSock2</li>
         </ul>
       </div>
     </div>
