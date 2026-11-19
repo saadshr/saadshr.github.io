@@ -6,6 +6,14 @@
   <title>Saad Sahraoui | Étudiant ingénieur en IA et Data Science</title>
   <meta name="description" content="Portfolio de Saad Sahraoui, étudiant ingénieur à l’ENSAM Rabat. Projets en business intelligence, vision par ordinateur, machine learning, développement web et programmation réseau en C.">
   <meta name="theme-color" content="#0a1016">
+  <link rel="canonical" href="https://saadshr.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Saad Sahraoui · Portfolio d’ingénierie">
+  <meta property="og:description" content="Projets en IA, data science, business intelligence, développement web et programmation réseau en C. Étudiant ingénieur à l’ENSAM Rabat.">
+  <meta property="og:url" content="https://saadshr.github.io/">
+  <meta property="og:image" content="https://saadshr.github.io/profile.png">
+  <meta property="og:image:alt" content="Portrait de Saad Sahraoui">
   <link rel="icon" href="assets/saad-monogram.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -202,12 +210,25 @@
           <span class="proj-tag">Programmation réseau · C natif</span>
           <time class="proj-year" datetime="2026">2026</time>
         </div>
-        <figure class="socket-preview">
-          <img src="assets/sockethub-network.png" width="1672" height="941" alt="Illustration de SocketHub-C : un client C échange des données avec un serveur" loading="lazy" decoding="async">
-          <figcaption>Chat TCP · FTP passif · WinSock2</figcaption>
-        </figure>
+        <div class="project-visual network-visual" aria-hidden="true">
+          <span>Client, sockets &amp; serveur</span>
+          <svg viewBox="0 0 220 104" focusable="false">
+            <path class="visual-guide" d="M32 17h156v70H32z M110 10v84M25 52h170"/>
+            <rect class="visual-surface" x="37" y="33" width="43" height="31" rx="4"/>
+            <path class="visual-line" d="M43 40h31M48 49l-4 4 4 4m17-8 4 4-4 4M58 64v9m-11 0h22"/>
+            <rect class="visual-surface" x="144" y="25" width="36" height="54" rx="5"/>
+            <path class="visual-line" d="M151 37h16m-16 13h16m-16 13h16"/>
+            <circle class="visual-dot" cx="172" cy="37" r="2"/>
+            <circle class="visual-dot" cx="172" cy="50" r="2"/>
+            <circle class="visual-dot" cx="172" cy="63" r="2"/>
+            <path class="visual-line" d="M80 43h63m-6-5 6 5-6 5"/>
+            <path class="visual-line visual-accent" d="M143 63H81m6-5-6 5 6 5"/>
+            <rect class="visual-shape" x="103" y="38" width="12" height="10" rx="2"/>
+            <rect class="visual-highlight" x="113" y="58" width="12" height="10" rx="2"/>
+          </svg>
+        </div>
         <h3>SocketHub-C — Chat TCP &amp; FTP</h3>
-        <p>Quatre programmes C11 sous Windows : clients et serveurs pour une messagerie TCP et un service FTP passif. Le projet gère le cadrage des messages, les envois partiels, l’authentification FTP et les transferts dans un dossier dédié, sans écrasement de fichiers existants. Des scripts PowerShell valident les échanges, les transferts et leur intégrité avec SHA-256. Démonstration locale sur 127.0.0.1, sans chiffrement.</p>
+        <p>Projet universitaire en C11 et WinSock2 sous Windows : chat TCP et FTP passif, avec authentification FTP et transferts dans un dossier dédié. Gestion des messages fragmentés et des envois partiels ; validation avec PowerShell, curl et SHA-256. Quatre exécutables pour une démonstration locale, sans chiffrement.</p>
         <div class="proj-tech">
           <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/c/c-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">C11</span>
           <span>WinSock2</span><span>GCC</span><span>PowerShell</span><span>TCP / FTP</span>
@@ -268,6 +289,7 @@
         </div>
         <div class="proj-actions">
           <a href="https://github.com/saadshr/ml2-customer-segmentation" target="_blank" rel="noopener" class="proj-btn">Customer Segmentation sur GitHub</a>
+          <a href="https://github.com/saadshr/ml2-customer-segmentation/blob/main/reports/latex/main.pdf" target="_blank" rel="noopener" class="proj-btn">Rapport (PDF)</a>
         </div>
       </article>
 
@@ -319,7 +341,7 @@
           </svg>
         </div>
         <h3>Classification ML — Arbre de décision</h3>
-        <p>Modèle de classification comparant Random Forest et Decision Tree avec optimisation GridSearchCV. Accuracy de 94% sur dataset UCI.</p>
+        <p>Comparaison de Random Forest et d’un arbre de décision pour une tâche de classification, avec recherche d’hyperparamètres par GridSearchCV.</p>
         <div class="proj-tech">
           <span><img src="assets/tech/python-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">Python</span><span><img src="assets/tech/scikitlearn-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">scikit-learn</span><span>GridSearchCV</span><span><img src="assets/tech/matplotlib-original.svg" width="15" height="15" alt="" loading="lazy" decoding="async">Matplotlib</span>
         </div>

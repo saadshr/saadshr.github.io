@@ -80,7 +80,7 @@ Les projets sont regroupés ici par domaine principal. Certains mobilisent plusi
 | **SocketHub-C** | Réseaux et systèmes | C11, WinSock2, GCC, PowerShell, curl | Chat TCP et FTP passif avec quatre exécutables natifs Windows. | [Code][sockethub] · [PDF][sockethub-pdf] |
 | **Smart Industrial Maintenance BI** | BI et IoT industriel | Power BI, Power Query (M), DAX, Python, LaTeX | Trois pages d’analyse sur 1 516 948 observations MetroPT-3. | [Code][metropt] · [Rapport][metropt-report] |
 | **Gripper Vision AI** | Vision industrielle | Python, OpenCV, scikit-learn, Streamlit | Prototype de recommandation de préhenseur à partir d’une photo. | [Code][gripper] |
-| **Customer Segmentation** | Apprentissage non supervisé | Python, pandas, scikit-learn, Jupyter | Comparaison de K-Means, Ward et DBSCAN sur 440 clients. | [Code][segmentation] |
+| **Customer Segmentation** | Apprentissage non supervisé | Python, pandas, scikit-learn, Jupyter | Comparaison de K-Means, Ward et DBSCAN sur 440 clients. | [Code][segmentation] · [Rapport PDF][segmentation-report] |
 | **Smart Fraud Detection** | Machine learning | Python, scikit-learn, XGBoost, FastAPI, Streamlit | Comparaison de modèles sur des transactions déséquilibrées. | [Code][fraud] |
 | **Classification ML** | Apprentissage supervisé | Python, scikit-learn, GridSearchCV, Matplotlib | Comparaison et optimisation d’arbres de classification. | [Carte du portfolio][projects] |
 | **Analyse exploratoire — EDA** | Analyse de données | pandas, NumPy, Seaborn, Matplotlib | Nettoyage, visualisation et exploration statistique. | [Carte du portfolio][projects] |
@@ -143,7 +143,7 @@ Projet réalisé avec **Hassan El Hajjam** dans le module Machine Learning 2. Co
 
 <img src="assets/tech/python-original.svg" alt="Python" width="32" height="32"> <img src="assets/tech/pandas-original.svg" alt="pandas" width="32" height="32"> <img src="assets/tech/scikitlearn-original.svg" alt="scikit-learn" width="32" height="32"> <img src="assets/tech/jupyter-original.svg" alt="Jupyter" width="32" height="32">
 
-[Consulter les notebooks et le rapport][segmentation]
+[Consulter les notebooks][segmentation] · [Lire le rapport PDF][segmentation-report]
 
 ### Smart Fraud Detection
 
@@ -287,6 +287,7 @@ Les logos SVG du dossier [`assets/tech/`](assets/tech/) proviennent de [Devicon]
 [metropt-report]: https://github.com/saadshr/smart-industrial-maintenance-bi/blob/main/BI_MetroPT_Report/output/BI_MetroPT_Report.pdf
 [gripper]: https://github.com/saadshr/gripper-vision-ai
 [segmentation]: https://github.com/saadshr/ml2-customer-segmentation
+[segmentation-report]: https://github.com/saadshr/ml2-customer-segmentation/blob/main/reports/latex/main.pdf
 [fraud]: https://github.com/saadshr/fraud_detection
 [rental-backend]: https://github.com/saadshr/carrental-backend
 [rental-frontend]: https://github.com/saadshr/carrental-frontend
