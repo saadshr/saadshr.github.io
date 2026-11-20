@@ -31,6 +31,7 @@
     <ul class="nav-links">
       <li><a href="#hero">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
+      <li><a href="#experience">Expérience</a></li>
       <li><a href="#projects">Projets</a></li>
       <li><a href="#skills">Compétences</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -105,10 +106,9 @@
       <div class="about-text">
         <h2>Mon parcours en ingénierie</h2>
         <p>Étudiant en deuxième année du cycle ingénieur à l’ENSAM Rabat (2026–2027), je me spécialise en data science, intelligence artificielle et santé digitale. Je développe des modèles de machine learning, des pipelines de données et des applications web.</p>
-        <p>À l’été 2026, j’ai effectué un stage d’initiation de deux mois chez <strong>Eurostyle Systems à Tanger</strong>. J’y ai développé un prototype qui propose un type de préhenseur à partir d’une photo de pièce plastique injectée.</p>
         <div class="about-stats">
           <div class="stat"><span class="stat-n">INDIA</span><span class="stat-l">Filière à l’ENSAM Rabat</span></div>
-          <div class="stat"><span class="stat-n">2 mois</span><span class="stat-l">Stage en vision par ordinateur</span></div>
+          <div class="stat"><span class="stat-n">2025–2028</span><span class="stat-l">Cycle ingénieur à l’ENSAM Rabat</span></div>
         </div>
       </div>
       <div class="about-tags">
@@ -133,10 +133,50 @@
   </div>
 </section>
 
+<!-- PROFESSIONAL EXPERIENCE -->
+<section id="experience" aria-labelledby="experience-title">
+  <div class="section-inner">
+    <div class="section-label">02 / Expérience</div>
+    <h2 class="section-title" id="experience-title">Expérience professionnelle</h2>
+    <p class="section-intro">Mes stages en entreprise : des problématiques concrètes, de l’analyse au prototypage.</p>
+    <div class="experience-list">
+      <!-- Ajouter chaque nouveau stage sous forme d’un article .experience-card, du plus récent au plus ancien. -->
+      <article class="experience-card" aria-labelledby="eurostyle-title">
+        <div class="experience-context">
+          <p class="experience-period"><time datetime="2026">Été 2026</time> · 2 mois</p>
+          <h3 id="eurostyle-title">Eurostyle Systems</h3>
+          <p class="experience-location">Tanger, Maroc</p>
+          <span class="experience-type">Stage d’initiation</span>
+        </div>
+        <div class="experience-details">
+          <p class="experience-role">Stagiaire en vision par ordinateur</p>
+          <h4>Sélection de préhenseurs pour pièces plastiques injectées</h4>
+          <p>Comment proposer un type de préhenseur à partir d’une photo de pièce ? Chez Eurostyle Systems, j’ai développé un prototype qui associe vision par ordinateur et apprentissage automatique pour répondre à cette problématique.</p>
+          <h5>Mes réalisations</h5>
+          <ul class="experience-tasks">
+            <li>Segmenter les photos avec OpenCV pour isoler la pièce plastique à analyser.</li>
+            <li>Extraire des mesures géométriques décrivant la forme de la pièce.</li>
+            <li>Utiliser une forêt aléatoire avec scikit-learn pour proposer un type de préhenseur à partir de ces caractéristiques.</li>
+            <li>Développer une interface Streamlit qui affiche la recommandation et la segmentation pour le contrôle visuel.</li>
+          </ul>
+          <div class="experience-result">
+            <h5>Le livrable</h5>
+            <p>Un prototype reliant l’analyse d’une image à une proposition de préhenseur, avec une interface de visualisation dédiée.</p>
+          </div>
+          <ul class="experience-tech" aria-label="Technologies utilisées">
+            <li>Python</li><li>OpenCV</li><li>scikit-learn</li><li>Streamlit</li>
+          </ul>
+          <a class="proj-btn" href="https://github.com/saadshr/gripper-vision-ai" target="_blank" rel="noopener">Consulter le projet Gripper Vision AI</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
-    <div class="section-label">02 / Projets</div>
+    <div class="section-label">03 / Projets</div>
     <h2 class="section-title">Projets techniques</h2>
     <p class="section-intro">Du prototypage en milieu industriel à l’analyse de données, aux applications web et à la programmation réseau.</p>
     <div class="project-controls" hidden>
@@ -463,7 +503,7 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
-    <div class="section-label">03 / Compétences</div>
+    <div class="section-label">04 / Compétences</div>
     <h2 class="section-title">Compétences techniques</h2>
     <div class="skills-grid">
       <div class="skill-card skill-card--ai">
@@ -549,7 +589,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner contact-inner">
-    <div class="section-label">04 / Contact</div>
+    <div class="section-label">05 / Contact</div>
     <h2 class="contact-title">Travaillons <span class="accent">ensemble</span><span class="accent">.</span></h2>
     <p class="contact-sub">Je recherche un stage technique en data science, machine learning ou développement backend.</p>
     <a href="mailto:saad20azmm@gmail.com" class="contact-cta">Envoyer un message</a>
