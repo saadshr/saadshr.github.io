@@ -779,6 +779,8 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
     50% { transform: translate(3px, -3px); }
   }
   .fraud-visual .visual-shape { animation: node-pulse 5s ease-in-out infinite; }
+  .tree-visual :is(.visual-shape, .visual-surface) { animation: node-pulse 5s ease-in-out infinite; }
+  .tree-visual .visual-surface { animation-delay: -1.5s; }
   .projects-grid.is-filtered .proj-card:not([hidden]) { animation: project-enter .22s ease-out both; }
   @keyframes scan {
     0%, 100% { transform: translateY(0); }
