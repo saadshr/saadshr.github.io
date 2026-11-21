@@ -746,7 +746,6 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
   .button, .nav-cta, .contact-cta, .proj-card, .project-filters button {
     transition: border-color .18s ease, background-color .18s ease, color .18s ease;
   }
-  .proj-card:is(:hover, :focus-within) .vision-scan { animation: scan .8s ease-in-out; }
   /* Animate SVG details while keeping labels, guides and cards still. */
   .project-visual .visual-dot { animation: signal-pulse 4s ease-in-out infinite; }
   .project-visual .visual-dot:nth-of-type(2n) { animation-delay: -1.3s; }
@@ -772,6 +771,7 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
     0%, 15%, 100% { transform: translateX(12px); opacity: 1; }
     65%, 80% { transform: translateX(-24px); opacity: .4; }
   }
+  .vision-visual .vision-scan { animation: scan 5s ease-in-out infinite; }
   .projects-grid.is-filtered .proj-card:not([hidden]) { animation: project-enter .22s ease-out both; }
   @keyframes scan {
     0%, 100% { transform: translateY(0); }
