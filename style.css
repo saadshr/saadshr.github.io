@@ -762,6 +762,16 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
     0%, 100% { fill: #1f454d; }
     50% { fill: #357068; }
   }
+  .network-visual .visual-shape { animation: packet-out 4s ease-in-out infinite; }
+  .network-visual .visual-highlight { animation: packet-back 4s ease-in-out infinite; }
+  @keyframes packet-out {
+    0%, 15%, 100% { transform: translateX(-17px); opacity: .4; }
+    65%, 80% { transform: translateX(17px); opacity: 1; }
+  }
+  @keyframes packet-back {
+    0%, 15%, 100% { transform: translateX(12px); opacity: 1; }
+    65%, 80% { transform: translateX(-24px); opacity: .4; }
+  }
   .projects-grid.is-filtered .proj-card:not([hidden]) { animation: project-enter .22s ease-out both; }
   @keyframes scan {
     0%, 100% { transform: translateY(0); }
