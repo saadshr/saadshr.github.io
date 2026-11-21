@@ -772,6 +772,12 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
     65%, 80% { transform: translateX(-24px); opacity: .4; }
   }
   .vision-visual .vision-scan { animation: scan 5s ease-in-out infinite; }
+  .cluster-visual .cluster-a { animation: cluster-drift 6s ease-in-out infinite; }
+  .cluster-visual .cluster-b { animation: cluster-drift 6s ease-in-out -3s infinite reverse; }
+  @keyframes cluster-drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(3px, -3px); }
+  }
   .projects-grid.is-filtered .proj-card:not([hidden]) { animation: project-enter .22s ease-out both; }
   @keyframes scan {
     0%, 100% { transform: translateY(0); }
