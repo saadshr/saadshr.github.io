@@ -205,3 +205,40 @@ function setupHeroNetwork() {
 
 setupHeroNetwork();
 
+function setupProjectMotion() {
+  const visuals = [...projectGrid.querySelectorAll('.project-visual')];
+  const toggle = controls.querySelector('.project-motion-toggle');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let active = true;
+
+  function syncMotion() {
+    const enabled = active && !reducedMotion.matches;
+    projectGrid.dataset.motion = enabled && !document.hidden ? 'running' : 'paused';
+    toggle.hidden = reducedMotion.matches;
+    toggle.setAttribute('aria-pressed', String(enabled));
+    toggle.textContent = enabled ? 'Animations : actives' : 'Animations : en pause';
+  }
+
+  // Avoid animating illustrations outside the viewport or hidden by a filter.
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        entry.target.classList.toggle('is-animating', entry.isIntersecting);
+      }
+    });
+    visuals.forEach(visual => observer.observe(visual));
+  } else {
+    visuals.forEach(visual => visual.classList.add('is-animating'));
+  }
+
+  toggle.addEventListener('click', () => {
+    active = !active;
+    syncMotion();
+  });
+  reducedMotion.addEventListener('change', syncMotion);
+  document.addEventListener('visibilitychange', syncMotion);
+  syncMotion();
+}
+
+setupProjectMotion();
+

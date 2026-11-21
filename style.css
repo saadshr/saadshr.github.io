@@ -454,7 +454,7 @@ main section + section { border-top: 1px solid var(--line); }
   border-bottom: 1px solid var(--line);
 }
 .project-filters { display: flex; flex-wrap: wrap; gap: .4rem; }
-.project-filters button {
+.project-filters button, .project-motion-toggle {
   min-height: 2.5rem;
   padding: .35rem .8rem;
   border: 1px solid #425764;
@@ -466,7 +466,7 @@ main section + section { border-top: 1px solid var(--line); }
   font-weight: 650;
   cursor: pointer;
 }
-.project-filters button:hover { border-color: var(--accent); color: var(--accent); }
+.project-filters button:hover, .project-motion-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .project-filters button[aria-pressed="true"] { background: var(--accent); color: #09201a; border-color: var(--accent); }
 .project-count, .proj-year { color: var(--muted); font: .8rem var(--mono); }
 
@@ -747,6 +747,21 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
     transition: border-color .18s ease, background-color .18s ease, color .18s ease;
   }
   .proj-card:is(:hover, :focus-within) .vision-scan { animation: scan .8s ease-in-out; }
+  /* Animate SVG details while keeping labels, guides and cards still. */
+  .project-visual .visual-dot { animation: signal-pulse 4s ease-in-out infinite; }
+  .project-visual .visual-dot:nth-of-type(2n) { animation-delay: -1.3s; }
+  .project-visual .visual-dot:nth-of-type(3n) { animation-delay: -2.6s; }
+  .project-visual svg *,
+  .projects-grid[data-motion="paused"] .project-visual svg * { animation-play-state: paused !important; }
+  .projects-grid:not([data-motion="paused"]) .project-visual.is-animating svg * { animation-play-state: running !important; }
+  @keyframes signal-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .35; }
+  }
+  @keyframes node-pulse {
+    0%, 100% { fill: #1f454d; }
+    50% { fill: #357068; }
+  }
   .projects-grid.is-filtered .proj-card:not([hidden]) { animation: project-enter .22s ease-out both; }
   @keyframes scan {
     0%, 100% { transform: translateY(0); }
