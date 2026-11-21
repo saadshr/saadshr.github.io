@@ -781,6 +781,15 @@ footer a { font-weight: 650; text-underline-offset: .25em; }
   .fraud-visual .visual-shape { animation: node-pulse 5s ease-in-out infinite; }
   .tree-visual :is(.visual-shape, .visual-surface) { animation: node-pulse 5s ease-in-out infinite; }
   .tree-visual .visual-surface { animation-delay: -1.5s; }
+  .distribution-visual .visual-shape {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+    animation: distribution-rise 5s ease-in-out infinite;
+  }
+  @keyframes distribution-rise {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(.82); }
+  }
   .projects-grid.is-filtered .proj-card:not([hidden]) { animation: project-enter .22s ease-out both; }
   @keyframes scan {
     0%, 100% { transform: translateY(0); }
