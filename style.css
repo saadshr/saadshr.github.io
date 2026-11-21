@@ -384,6 +384,24 @@ main section + section { border-top: 1px solid var(--line); }
 .experience-context h3 { margin-top: 1.1rem; font-size: clamp(1.4rem, 2.5vw, 1.9rem); line-height: 1.2; letter-spacing: -.025em; }
 .experience-location { margin-top: .5rem; color: var(--muted); }
 .experience-type { display: inline-block; margin-top: 1.4rem; padding: .3rem .65rem; border: 1px solid var(--signal); border-radius: .3rem; color: var(--accent); font-size: .875rem; }
+.experience-illustration {
+  margin-top: 2rem;
+  padding: .75rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: var(--surface);
+}
+.experience-illustration svg { display: block; width: 100%; max-width: 18rem; height: auto; margin-inline: auto; }
+.gripper-guides { fill: none; stroke: var(--line); stroke-width: .6; }
+.gripper-axis { stroke-dasharray: 3 5; }
+.gripper-camera, .gripper-mechanism { fill: var(--raised); stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.gripper-camera circle { fill: #1f454d; }
+.gripper-sight { fill: none; stroke: var(--signal); stroke-dasharray: 4 5; }
+.gripper-piece-detail { fill: none; stroke: var(--signal); stroke-width: 1.2; }
+.gripper-detection { fill: none; stroke: var(--accent); stroke-width: 1.4; }
+.gripper-feature { fill: var(--accent-strong); }
+.experience-illustration figcaption { padding: .5rem .25rem; color: var(--accent); font: .875rem/1.6 var(--mono); }
+.experience-illustration figcaption span { display: block; margin-top: .25rem; color: var(--muted); font: .875rem/1.6 "Inter", system-ui, sans-serif; }
 .experience-details { min-width: 0; padding: clamp(1.25rem, 3vw, 2.25rem); }
 .experience-role { color: var(--accent); font-size: .9rem; font-weight: 650; }
 .experience-details h4 { margin: .6rem 0 1rem; font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.35; }
