@@ -40,8 +40,25 @@ Ce portfolio présente mes projets académiques et mon expérience chez **Eurost
 - **Dix projets filtrables :** IA & ML, Données, Web et Réseaux & C.
 - **Compétences :** outils utilisés en apprentissage automatique, analyse, data engineering et développement.
 - **Contact et CV :** liens professionnels et CV au format PDF.
+- **Commentaires privés :** formulaire en bas du portfolio, avec réception par e-mail via FormSubmit.
 - **Navigation accessible :** lien d’évitement, focus clavier visible, navigation active et compteur de projets.
 - **Interface responsive :** grille adaptée au mobile, progression de lecture et animation réseau désactivable, respectant la préférence de réduction des mouvements.
+
+## Recevoir les commentaires
+
+La section `#commentaires` envoie les messages à **saad20azmm@gmail.com** via [FormSubmit](https://formsubmit.co/). Les commentaires ne sont pas affichés publiquement sur le portfolio. Aucun serveur ni base de données n’est nécessaire dans ce dépôt.
+
+Après publication sur GitHub Pages :
+
+1. Envoyer un premier commentaire depuis le site en ligne.
+2. Ouvrir l’e-mail d’activation de FormSubmit reçu à cette adresse (vérifier aussi les spams), puis cliquer sur le lien de confirmation.
+3. Envoyer un deuxième commentaire pour vérifier la réception. Le champ e-mail du visiteur permet de lui répondre depuis la messagerie.
+
+Le formulaire utilise une soumission HTML classique et fonctionne sans JavaScript. FormSubmit affiche sa page de confirmation après l’envoi et conserve sa protection reCAPTCHA ; un champ piège complète la protection contre les robots. Les données saisies transitent par ce service externe, comme indiqué à côté du bouton d’envoi.
+
+Pour changer le destinataire, modifier l’adresse dans l’attribut `action` du formulaire dans `index.html`, puis activer la nouvelle adresse. La réception réelle reste à vérifier après déploiement et activation ; un aperçu local ne valide pas la livraison des e-mails.
+
+Documentation : [configuration du formulaire](https://formsubmit.co/documentation) et [activation / problèmes de réception](https://formsubmit.co/help).
 
 ## Carte des domaines
 

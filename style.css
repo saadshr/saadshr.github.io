@@ -692,6 +692,51 @@ main section + section { border-top: 1px solid var(--line); }
   overflow-wrap: anywhere;
 }
 .contact-links svg { width: 1rem; height: 1rem; }
+.feedback-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.feedback-intro > p:not(.section-label) { max-width: 44ch; color: var(--muted); }
+.feedback-intro .feedback-private { margin-top: 1.25rem; color: var(--accent); }
+.feedback-form {
+  min-width: 0;
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.15rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+.feedback-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.feedback-field { min-width: 0; display: grid; gap: .5rem; }
+.feedback-field label { font-weight: 600; }
+.feedback-field label span { color: var(--muted); font-size: .875rem; font-weight: 400; }
+.feedback-field input, .feedback-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  padding: .8rem .9rem;
+  background: var(--page);
+  color: var(--ink);
+  font: inherit;
+}
+.feedback-field textarea { resize: vertical; min-height: 10rem; }
+.feedback-field :is(input, textarea)::placeholder { color: var(--muted); opacity: 1; }
+.feedback-field :is(input, textarea):focus { border-color: var(--accent); }
+.feedback-hint, .feedback-privacy { color: var(--muted); font-size: .875rem; }
+.feedback-hint a { color: var(--accent); text-underline-offset: .2em; }
+.feedback-form button { justify-self: start; cursor: pointer; font: inherit; font-weight: 650; }
+.feedback-trap { display: none; }
+@media (max-width: 52rem) {
+  .feedback-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 36rem) {
+  .feedback-fields { grid-template-columns: minmax(0, 1fr); }
+  .feedback-form button { width: 100%; }
+}
 footer {
   display: flex;
   flex-wrap: wrap;

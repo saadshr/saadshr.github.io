@@ -651,6 +651,39 @@
     </div>
   </div>
 </section>
+<section id="commentaires" aria-labelledby="commentaires-title">
+  <div class="section-inner feedback-grid">
+    <div class="feedback-intro">
+      <p class="section-label">Votre avis</p>
+      <h2 class="section-title" id="commentaires-title">Un retour sur<br>mon <span class="accent">portfolio ?</span></h2>
+      <p>Un projet vous a intéressé ? Une suggestion pour améliorer ce portfolio ? Je serai ravi de vous lire.</p>
+      <p class="feedback-private">Votre commentaire m’est envoyé par e-mail. Il ne sera pas publié sur le site.</p>
+    </div>
+    <form class="feedback-form" action="https://formsubmit.co/saad20azmm@gmail.com" method="POST" aria-labelledby="commentaires-title" aria-describedby="feedback-privacy">
+      <input type="hidden" name="_subject" value="Nouveau commentaire sur mon portfolio">
+      <input type="hidden" name="_template" value="table">
+      <input class="feedback-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="feedback-fields">
+        <div class="feedback-field">
+          <label for="feedback-name">Votre nom <span>(obligatoire)</span></label>
+          <input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Votre nom" required>
+        </div>
+        <div class="feedback-field">
+          <label for="feedback-email">Votre e-mail <span>(obligatoire)</span></label>
+          <input id="feedback-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="vous@exemple.com" required>
+        </div>
+      </div>
+      <div class="feedback-field">
+        <label for="feedback-message">Votre commentaire <span>(obligatoire)</span></label>
+        <textarea id="feedback-message" name="message" rows="6" minlength="10" maxlength="5000" placeholder="Partagez votre avis, une idée ou une suggestion…" aria-describedby="feedback-hint" required></textarea>
+        <p class="feedback-hint" id="feedback-hint">Entre 10 et 5 000 caractères.</p>
+      </div>
+      <p class="feedback-privacy" id="feedback-privacy">En envoyant ce formulaire, vous transmettez votre nom, votre e-mail et votre commentaire à FormSubmit pour leur envoi à Saad. Votre e-mail me permettra de vous répondre.</p>
+      <button class="button primary" type="submit">Envoyer mon commentaire</button>
+      <p class="feedback-hint">Un problème avec le formulaire ? <a href="mailto:saad20azmm@gmail.com">Écrivez-moi directement</a>.</p>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer>
